@@ -1,0 +1,283 @@
+:root {
+    /* Mainly for primary text */
+    --whitePrimary: #fff;
+    --whiteSecondary: rgba(255, 255, 255, 0.32);
+
+     /* Mainly for secondary (in-card) text */
+    --blackPrimary: #222;
+    --blackSecondary: rgba(0, 0, 0, 0.32);
+
+     /* hover/active text */
+    --yellowPrimary: #FFCF23;
+    --yellowSecondary: rgba(255, 207, 35, 0.08);
+
+    --cardRadius: 24px;
+  }
+
+@font-face {
+    font-family: 'Aeonik'; 
+    src: "assets/fonts/AeonikMonoTRIAL-Regular.otf"; 
+}
+
+@font-face {
+    font-family: 'Signifer'; 
+    src: "assets/fonts/SigniferTest-Light.otf"; 
+}
+
+body, footer {
+    background-color: #222;
+    font-family: 'Aeonik', Courier, monospace;
+    margin-left: 16px;
+    margin-right: 24px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+}
+
+.navItems {
+    display: flex;
+    color: var(--whiteSecondary);
+}
+
+.navLink {
+    color: var(--whiteSecondary);
+    text-decoration: underline dotted;
+    margin: 0;
+    padding: 8px;
+}
+
+.profileImg {
+    width: 24px;
+    border-radius: 100px;
+}
+
+/* About section */
+
+.sidebyside {
+    display: flex;
+    flex-direction: row;
+    padding: 32px;
+}
+
+.sectionHeader{
+    width: 200px;
+    color: var(--whiteSecondary);
+}
+
+h3 {
+    font-family: 'Signifier', Times, serif;
+    font-size: 42px;
+    font-weight: lighter;
+    color: var(--whitePrimary);
+}
+
+.separator {
+    width: auto;
+    border-bottom: dotted var(--whiteSecondary);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+/* Proj sections */
+
+.allProjContainer {
+    width: 100%;
+}
+
+.allProjContainer img {
+    width: auto;
+    height: 100px;
+}
+
+.allProjContainer h4 {
+    width: 100%;
+}
+
+.allProjContainer p {
+    width: 100%;
+}
+
+.topProjContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.mainProj {
+    height: 500px;
+    width: 100%;
+    background: linear-gradient(#fff, #F8F8F8) ;
+    border-radius: var(--cardRadius);
+    padding: 24px;
+    margin-right: 4px;
+}
+
+.projTitles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.titleSecondary {
+    color: var(--blackSecondary);
+    width: 100%;
+}
+
+h4 {
+    font-family: 'Signifier';
+    font-size: 36px;
+    font-weight: lighter;
+}
+
+.stackProjContainer {
+    margin-left: 4px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proj1 {
+    background: linear-gradient(#FF8933, #FF720C);
+    height: 248px;
+    border-radius: var(--cardRadius);
+    padding: 24px;
+    display: flex;
+    flex: column;
+    width: 592px;
+}
+
+.proj2 {
+    background: linear-gradient(#FFE092, #FFC75A);
+    height: 248px;
+    border-radius: var(--cardRadius);
+    padding: 24px;
+    display: flex;
+    flex: column;
+    margin-top: 4px;
+    width: 100%;
+}
+
+.rowProjContainer {
+    display: flex;
+    flex: row;
+    width: 100%;
+}
+
+.proj3 {
+    background: linear-gradient(#92E5FF, #5A74FF);
+    height: 248px;
+    border-radius: var(--cardRadius);
+    padding: 24px;
+    display: flex;
+    flex: column;
+    margin-top: 4px;
+    margin-right: 2px;
+    width: 100%;
+}
+
+.proj4 {
+    background: linear-gradient(#35F45F, #25C13E);
+    height: 248px;
+    border-radius: var(--cardRadius);
+    padding: 24px;
+    display: flex;
+    flex: column;
+    margin-top: 4px;
+    margin-left: 2px;
+    width: 100%;
+}
+
+/* Contact */
+
+a{
+    text-decoration: underline dotted;
+    color: var(--yellowPrimary);
+}
+
+a:hover{
+    color: var(--yellowPrimary);
+    text-decoration: none;
+}
+
+/* footer */
+
+footer{
+    color: var(--whiteSecondary);
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav {
+      flex-direction: column;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topProjContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mainProj {
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    .proj1 {
+        width: 100%;
+    }
+    
+
+    h3 {
+        font-family: 'Signifier', Times, serif;
+        font-size: 24px;
+        margin-top: 8px;
+        font-weight: lighter;
+        color: var(--whitePrimary);
+    }
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rowProjContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Make the sidebar stack below the body */
+    aside {
+      order: 2;
+    }
+    /* Change the header background */
+   
+    /* Change the navbar and footer background */
+    
+  }
+  
